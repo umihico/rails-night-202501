@@ -1,18 +1,18 @@
 ---
 # You can also start simply with 'default'
-theme: seriph
+# theme: seriph
+theme: apple-basic
 # random image from a curated Unsplash collection by Anthony
 # like them? see https://unsplash.com/collections/94734566/slidev
-background: https://cover.sli.dev
 # some information about your slides (markdown enabled)
-title: Welcome to Slidev
+title: "Agile Infrastructure: Prairie Card's AWS Strategy for Dynamic Growth"
 info: |
   ## Slidev Starter Template
   Presentation slides for developers.
 
   Learn more at [Sli.dev](https://sli.dev)
 # apply unocss classes to the current slide
-class: text-center
+# class: text-center
 # https://sli.dev/features/drawing
 drawings:
   persist: false
@@ -20,619 +20,413 @@ drawings:
 transition: slide-left
 # enable MDC Syntax: https://sli.dev/features/mdc
 mdc: true
+# layout: intro-image
+# image: background.png
+layout: intro
+colorSchema: auto
 ---
 
-# Welcome to Slidev
 
-Presentation slides for developers
+## Agile Infrastructure:
+## Prairie Card's AWS Strategy for Dynamic Growth
 
-<div class="pt-12">
-  <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
-    Press Space for next page <carbon:arrow-right class="inline"/>
+### Umihiko Iwasa
+
+<!-- 
+# Agile Infrastructure:
+
+Prairie Card's AWS Strategy for Dynamic Growth
+
+<div class="absolute bottom-10">
+  <span class="font-700">
+    Umihiko Iwasa
   </span>
-</div>
+</div> -->
 
-<div class="abs-br m-6 flex gap-2">
-  <button @click="$slidev.nav.openInEditor()" title="Open in Editor" class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
-    <carbon:edit />
-  </button>
-  <a href="https://github.com/slidevjs/slidev" target="_blank" alt="GitHub" title="Open in GitHub"
-    class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
-    <carbon-logo-github />
-  </a>
-</div>
 
-<!--
-The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
--->
+<style>
+h2 {
+  font-size: 1.9em !important;
+  line-height: 1.5em !important;
+}
+.slidev-layout{
+  background-color: #499DA2;
+  background-image: url("/assets/logo.png");
+  background-repeat: no-repeat;
+  background-position: right 5% bottom 5%;
+  background-size: 25%;
+}
+</style>
 
 ---
+layout: intro
+# transition: slide-left
 transition: fade-out
 ---
 
-# What is Slidev?
+## Who is this speaker?
 
-Slidev is a slides maker and presenter designed for developers, consist of the following features
+<p></p>
 
-- 📝 **Text-based** - focus on the content with Markdown, and then style them later
-- 🎨 **Themable** - themes can be shared and re-used as npm packages
-- 🧑‍💻 **Developer Friendly** - code highlighting, live coding with autocompletion
-- 🤹 **Interactive** - embed Vue components to enhance your expressions
-- 🎥 **Recording** - built-in recording and camera view
-- 📤 **Portable** - export to PDF, PPTX, PNGs, or even a hostable SPA
-- 🛠 **Hackable** - virtually anything that's possible on a webpage is possible in Slidev
-<br>
-<br>
+# <span v-mark.circle.orange="1">Umi</span>hiko Iwasa
 
-Read more about [Why Slidev?](https://sli.dev/guide/why)
+<p></p>
 
-<!--
-You can have `style` tag in markdown to override the style for the current page.
-Learn more: https://sli.dev/features/slide-scope-style
--->
+### Work
+Studio Prairie Inc. <span v-click="4" v-mark.orange="4">a.k.a. Prairie Card's company</span>
+### Role
+<span v-mark.orange="5">Full Stack Web Developer, Backend Engineer Manager</span>
+### Love
+<span v-mark.circle.orange="6">AWS</span><span v-click=[0,6]>, Terraform, Ruby on Rails, Next.js, TypeScript</span>
+### Web
+<span v-mark.circle.orange="7">https://my.prairie.cards/u/umihico</span> (X, GitHub, etc.)
+
+
+<p v-click="2" class="absolute transform rotate-8" style="left: 610px;top: 210px;">Me</p>
+<arrow v-click="2" x1="600" y1="250" x2="750" y2="270" color="#FFF" width="2" arrowSize="1" />
+
+<p v-click="3" class="absolute transform" style="left: 730px;top: 440px;">Somebody's head</p>
+<arrow v-click="3" x1="800" y1="450" x2="840" y2="410" color="#FFF" width="2" arrowSize="1" />
+
+<!-- <div class="flex items-center">
+  <div>
+    <a href="https://my.prairie.cards/u/umihico" target="_blank" class="text-white">https://my.prairie.cards/u/umihico</a>
+    <div>
+    X, GitHub, etc.
+    </div>
+  </div>
+  <img src="/assets/qr.png" alt="Umihiko Iwasa" class="w-24 h-24 ml-2">
+</div> -->
 
 <style>
 h1 {
-  background-color: #2B90B6;
-  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
-  background-size: 100%;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
+  font-size: 2em !important;
+}
+.slidev-layout{
+  background-color: #499DA2;
+  background-image: url("/assets/umihiko_iwasa.jpg");
+  background-repeat: no-repeat;
+  background-position: right 5% bottom 50%;
+  background-size: 25%;
 }
 </style>
 
-<!--
-Here is another comment.
--->
 
 ---
-transition: slide-up
-level: 2
+layout: intro
+transition: slide-left
 ---
 
-# Navigation
+<div v-click=1>
+<h1>What is Prairie Card?</h1>
+</div>
 
-Hover on the bottom-left corner to see the navigation's controls panel, [learn more](https://sli.dev/guide/navigation.html)
+<ul>
+<li v-click=2><span v-mark.orange>Digital Business Card</span> with NFC Technology</li>
+<li v-click=3><span v-mark.orange>No App</span> Required</li>
+<li v-click=4><span v-mark.orange>No Camera</span> Required</li>
+<li v-click=5><span v-mark.orange>Designable</span> as you want
+<ul>
+  <li v-click=6>Cool examples <a href="https://x.com/hashtag/PrairieFriends">https://x.com/hashtag/<span v-mark.orange>PrairieFriends</span></a></li>
+</ul>
+</li>
+</ul>
 
-## Keyboard Shortcuts
+<div class="h-28"></div>
+<img v-click=1 src="/assets/qr.png" class="w-20 fixed bottom-8 left-115">
 
-|     |     |
-| --- | --- |
-| <kbd>right</kbd> / <kbd>space</kbd>| next animation or slide |
-| <kbd>left</kbd>  / <kbd>shift</kbd><kbd>space</kbd> | previous animation or slide |
-| <kbd>up</kbd> | previous slide |
-| <kbd>down</kbd> | next slide |
+### Web
 
-<!-- https://sli.dev/guide/animations.html#click-animation -->
-<img
-  v-click
-  class="absolute -bottom-9 -left-7 w-80 opacity-50"
-  src="https://sli.dev/assets/arrow-bottom-left.svg"
-  alt=""
-/>
-<p v-after class="absolute bottom-23 left-45 opacity-30 transform -rotate-10">Here!</p>
+<span v-mark.circle.orange=0>https://my.prairie.cards/u/umihico</span> (X, GitHub, etc.)
 
----
-layout: two-cols
-layoutClass: gap-16
----
 
-# Table of contents
+<img v-click=2 src="/assets/launch_image.webp" class="fixed bottom-40 right-10 w-98">
+<img v-click=3 src="/assets/demo.gif" class="fixed bottom-40 right-10 w-100">
+<!-- <img src="/assets/prairie_card_description.webp" class="fixed top-10 right-10 w-80"> -->
 
-You can use the `Toc` component to generate a table of contents for your slides:
+<video v-click=5 muted class="fixed bottom-40 right-10 w-102" controls loop>
+  <source src="/assets/demo.mov" type="video/mp4">
+</video>
 
-```html
-<Toc minDepth="1" maxDepth="1"></Toc>
-```
-
-The title will be inferred from your slide content, or you can override it with `title` and `level` in your frontmatter.
-
-::right::
-
-<Toc v-click minDepth="1" maxDepth="2"></Toc>
-
----
-layout: image-right
-image: https://cover.sli.dev
----
-
-# Code
-
-Use code snippets and get the highlighting directly, and even types hover![^1]
-
-```ts {all|5|7|7-8|10|all} twoslash
-// TwoSlash enables TypeScript hover information
-// and errors in markdown code blocks
-// More at https://shiki.style/packages/twoslash
-
-import { computed, ref } from 'vue'
-
-const count = ref(0)
-const doubled = computed(() => count.value * 2)
-
-doubled.value = 2
-```
-
-<arrow v-click="[4, 5]" x1="350" y1="310" x2="195" y2="334" color="#953" width="2" arrowSize="1" />
-
-<!-- This allow you to embed external code blocks -->
-<<< @/snippets/external.ts#snippet
-
-<!-- Footer -->
-[^1]: [Learn More](https://sli.dev/guide/line-highlighting)
-
-<!-- Inline style -->
+<!-- 
+  background-image: url("/assets/demo.gif");
+  background-repeat: no-repeat;
+  background-position: right 5% bottom 50%;
+  background-size: 40%; -->
 <style>
-.footnotes-sep {
-  @apply mt-5 opacity-10;
+h1 {
+  font-size: 2em !important;
 }
-.footnotes {
-  @apply text-sm opacity-75;
-}
-.footnote-backref {
-  display: none;
+.slidev-layout{
+  background-color: #499DA2;
 }
 </style>
 
-<!--
-Notes can also sync with clicks
-
-[click] This will be highlighted after the first click
-
-[click] Highlighted with `count = ref(0)`
-
-[click:3] Last click (skip two clicks)
--->
 
 ---
-level: 2
+transition: slide-left
 ---
 
-# Shiki Magic Move
+<style>
 
-Powered by [shiki-magic-move](https://shiki-magic-move.netlify.app/), Slidev supports animations across multiple code snippets.
-
-Add multiple code blocks and wrap them with <code>````md magic-move</code> (four backticks) to enable the magic move. For example:
-
-````md magic-move {lines: true}
-```ts {*|2|*}
-// step 1
-const author = reactive({
-  name: 'John Doe',
-  books: [
-    'Vue 2 - Advanced Guide',
-    'Vue 3 - Basic Guide',
-    'Vue 4 - The Mystery'
-  ]
-})
-```
-
-```ts {*|1-2|3-4|3-4,8}
-// step 2
-export default {
-  data() {
-    return {
-      author: {
-        name: 'John Doe',
-        books: [
-          'Vue 2 - Advanced Guide',
-          'Vue 3 - Basic Guide',
-          'Vue 4 - The Mystery'
-        ]
-      }
-    }
-  }
+.slidev-layout{
+  background-color: #499DA2;
+  height: 100vh;
 }
-```
+</style>
 
-```ts
-// step 3
-export default {
-  data: () => ({
-    author: {
-      name: 'John Doe',
-      books: [
-        'Vue 2 - Advanced Guide',
-        'Vue 3 - Basic Guide',
-        'Vue 4 - The Mystery'
-      ]
-    }
-  })
-}
-```
+# As one of awesome swags 🎉
 
-Non-code blocks are ignored.
-
-```vue
-<!-- step 4 -->
-<script setup>
-const author = {
-  name: 'John Doe',
-  books: [
-    'Vue 2 - Advanced Guide',
-    'Vue 3 - Basic Guide',
-    'Vue 4 - The Mystery'
-  ]
-}
-</script>
-```
-````
-
----
-
-# Components
-
-<div grid="~ cols-2 gap-4">
+<div class="flex">
 <div>
-
-You can use Vue components directly inside your slides.
-
-We have provided a few built-in components like `<Tweet/>` and `<Youtube/>` that you can use directly. And adding your custom components is also super easy.
-
-```html
-<Counter :count="10" />
-```
-
-<!-- ./components/Counter.vue -->
-<Counter :count="10" m="t-4" />
-
-Check out [the guides](https://sli.dev/builtin/components.html) for more.
-
+<a href="https://jawspankration2024.jaws-ug.jp/en/news/jehfb2uqlw/">https://jawspankration2024.jaws-ug.jp/en/news/jehfb2uqlw/</a>
+<img src="/assets/swag.png" class="h-90 mt-2">
 </div>
 <div>
-
-```html
-<Tweet id="1390115482657726468" />
-```
-
-<Tweet id="1390115482657726468" scale="0.65" />
-
+<a href="https://x.com/jawsdays/status/1818978512575062221">https://x.com/jawsdays/status/1818978512575062221</a>
+<img src="/assets/swag_tweet.png" class="h-90 mt-8">
 </div>
 </div>
 
-<!--
-Presenter note with **bold**, *italic*, and ~~striked~~ text.
-
-Also, HTML elements are valid:
-<div class="flex w-full">
-  <span style="flex-grow: 1;">Left content</span>
-  <span>Right content</span>
-</div>
--->
-
 ---
-class: px-20
+transition: slide-left
 ---
 
-# Themes
+<style>
 
-Slidev comes with powerful theming support. Themes can provide styles, layouts, components, or even configurations for tools. Switching between themes by just **one edit** in your frontmatter:
+.slidev-layout{
+  background-color: #499DA2;
+  height: 100vh;
+}
+</style>
 
-<div grid="~ cols-2 gap-2" m="t-2">
+# Which service does host your website?
 
-```yaml
----
-theme: default
----
-```
+<p class="h-5"></p>
 
-```yaml
----
-theme: seriph
----
-```
-
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-default/01.png?raw=true" alt="">
-
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-seriph/01.png?raw=true" alt="">
-
-</div>
-
-Read more about [How to use a theme](https://sli.dev/themes/use.html) and
-check out the [Awesome Themes Gallery](https://sli.dev/themes/gallery.html).
-
----
-
-# Clicks Animations
-
-You can add `v-click` to elements to add a click animation.
-
-<div v-click>
-
-This shows up when you click the slide:
-
-```html
-<div v-click>This shows up when you click the slide.</div>
-```
-
-</div>
-
-<br>
-
-<v-click>
-
-The <span v-mark.red="3"><code>v-mark</code> directive</span>
-also allows you to add
-<span v-mark.circle.orange="4">inline marks</span>
-, powered by [Rough Notation](https://roughnotation.com/):
-
-```html
-<span v-mark.underline.orange>inline markers</span>
-```
-
-</v-click>
-
-<div mt-20 v-click>
-
-[Learn More](https://sli.dev/guide/animations#click-animation)
-
-</div>
-
----
-
-# Motions
-
-Motion animations are powered by [@vueuse/motion](https://motion.vueuse.org/), triggered by `v-motion` directive.
-
-```html
-<div
-  v-motion
-  :initial="{ x: -80 }"
-  :enter="{ x: 0 }"
-  :click-3="{ x: 80 }"
-  :leave="{ x: 1000 }"
->
-  Slidev
-</div>
-```
-
-<div class="w-60 relative">
-  <div class="relative w-40 h-40">
-    <img
-      v-motion
-      :initial="{ x: 800, y: -100, scale: 1.5, rotate: -50 }"
-      :enter="final"
-      class="absolute inset-0"
-      src="https://sli.dev/logo-square.png"
-      alt=""
-    />
-    <img
-      v-motion
-      :initial="{ y: 500, x: -100, scale: 2 }"
-      :enter="final"
-      class="absolute inset-0"
-      src="https://sli.dev/logo-circle.png"
-      alt=""
-    />
-    <img
-      v-motion
-      :initial="{ x: 600, y: 400, scale: 2, rotate: 100 }"
-      :enter="final"
-      class="absolute inset-0"
-      src="https://sli.dev/logo-triangle.png"
-      alt=""
-    />
+<div class="grid grid-cols-3 gap-4 justify-items-center">
+  <div class="text-center text-3xl">
+    Amplify?
   </div>
-
-  <div
-    class="text-5xl absolute top-14 left-40 text-[#2B90B6] -z-1"
-    v-motion
-    :initial="{ x: -80, opacity: 0}"
-    :enter="{ x: 0, opacity: 1, transition: { delay: 2000, duration: 1000 } }">
-    Slidev
+  <div class="text-center text-3xl">
+    ECS?
   </div>
-</div>
-
-<!-- vue script setup scripts can be directly used in markdown, and will only affects current page -->
-<script setup lang="ts">
-const final = {
-  x: 0,
-  y: 0,
-  rotate: 0,
-  scale: 1,
-  transition: {
-    type: 'spring',
-    damping: 10,
-    stiffness: 20,
-    mass: 2
-  }
-}
-</script>
-
-<div
-  v-motion
-  :initial="{ x:35, y: 30, opacity: 0}"
-  :enter="{ y: 0, opacity: 1, transition: { delay: 3500 } }">
-
-[Learn More](https://sli.dev/guide/animations.html#motion)
-
-</div>
-
----
-
-# LaTeX
-
-LaTeX is supported out-of-box. Powered by [KaTeX](https://katex.org/).
-
-<div h-3 />
-
-Inline $\sqrt{3x-1}+(1+x)^2$
-
-Block
-$$ {1|3|all}
-\begin{aligned}
-\nabla \cdot \vec{E} &= \frac{\rho}{\varepsilon_0} \\
-\nabla \cdot \vec{B} &= 0 \\
-\nabla \times \vec{E} &= -\frac{\partial\vec{B}}{\partial t} \\
-\nabla \times \vec{B} &= \mu_0\vec{J} + \mu_0\varepsilon_0\frac{\partial\vec{E}}{\partial t}
-\end{aligned}
-$$
-
-[Learn more](https://sli.dev/features/latex)
-
----
-
-# Diagrams
-
-You can create diagrams / graphs from textual descriptions, directly in your Markdown.
-
-<div class="grid grid-cols-4 gap-5 pt-4 -mb-6">
-
-```mermaid {scale: 0.5, alt: 'A simple sequence diagram'}
-sequenceDiagram
-    Alice->John: Hello John, how are you?
-    Note over Alice,John: A typical interaction
-```
-
-```mermaid {theme: 'neutral', scale: 0.8}
-graph TD
-B[Text] --> C{Decision}
-C -->|One| D[Result 1]
-C -->|Two| E[Result 2]
-```
-
-```mermaid
-mindmap
-  root((mindmap))
-    Origins
-      Long history
-      ::icon(fa fa-book)
-      Popularisation
-        British popular psychology author Tony Buzan
-    Research
-      On effectiveness<br/>and features
-      On Automatic creation
-        Uses
-            Creative techniques
-            Strategic planning
-            Argument mapping
-    Tools
-      Pen and paper
-      Mermaid
-```
-
-```plantuml {scale: 0.7}
-@startuml
-
-package "Some Group" {
-  HTTP - [First Component]
-  [Another Component]
-}
-
-node "Other Groups" {
-  FTP - [Second Component]
-  [First Component] --> FTP
-}
-
-cloud {
-  [Example 1]
-}
-
-database "MySql" {
-  folder "This is my folder" {
-    [Folder 3]
-  }
-  frame "Foo" {
-    [Frame 4]
-  }
-}
-
-[Another Component] --> [Example 1]
-[Example 1] --> [Folder 3]
-[Folder 3] --> [Frame 4]
-
-@enduml
-```
-
-</div>
-
-Learn More: [Mermaid Diagrams](https://sli.dev/guide/features/mermaid) and [PlantUML Diagrams](https://sli.dev/guide/features/plantuml)
-
----
-foo: bar
-dragPos:
-  square: 691,32,167,_,-16
----
-
-# Draggable Elements
-
-Double-click on the draggable elements to edit their positions.
-
-<br>
-
-###### Directive Usage
-
-```md
-<img v-drag="'square'" src="https://sli.dev/logo.png">
-```
-
-<br>
-
-###### Component Usage
-
-```md
-<v-drag text-3xl>
-  <carbon:arrow-up />
-  Use the `v-drag` component to have a draggable container!
-</v-drag>
-```
-
-<v-drag pos="663,206,261,_,-15">
-  <div text-center text-3xl border border-main rounded>
-    Double-click me!
+  <div class="text-center text-3xl">
+    App Runner?
   </div>
-</v-drag>
+  <img src="/assets/amplify.png" class="h-25 w-25 mt-2">
+  <img src="/assets/ecs.png" class="h-25 w-25 mt-2">
+  <img src="/assets/apprunner.png" class="h-25 w-25 mt-2">
+</div>
 
-<img v-drag="'square'" src="https://sli.dev/logo.png">
+<p class="h-5"></p>
 
-###### Draggable Arrow
+<div v-click=1>🤔 We are just one year+ old startup</div>
+<div v-click=2>🤔 Our human resources is limited</div>
+<div v-click=3>🤔 Our traffic is not so high</div>
 
-```md
-<v-drag-arrow two-way />
-```
+<p class="h-1"></p>
 
-<v-drag-arrow pos="67,452,253,46" two-way op70 />
-
----
-src: ./pages/imported-slides.md
-hide: false
----
-
----
-
-# Monaco Editor
-
-Slidev provides built-in Monaco Editor support.
-
-Add `{monaco}` to the code block to turn it into an editor:
-
-```ts {monaco}
-import { ref } from 'vue'
-import { emptyArray } from './external'
-
-const arr = ref(emptyArray(10))
-```
-
-Use `{monaco-run}` to create an editor that can execute the code directly in the slide:
-
-```ts {monaco-run}
-import { version } from 'vue'
-import { emptyArray, sayHello } from './external'
-
-sayHello()
-console.log(`vue ${version}`)
-console.log(emptyArray<number>(10).reduce(fib => [...fib, fib.at(-1)! + fib.at(-2)!], [1, 1]))
-```
+<div v-click=4>Therefore...?</div>
+<h2 v-click=5>We are using them ALL and we are happy with it! 🤤</h2>
 
 ---
-layout: center
-class: text-center
+transition: slide-left
 ---
 
-# Learn More
+<style>
 
-[Documentation](https://sli.dev) · [GitHub](https://github.com/slidevjs/slidev) · [Showcases](https://sli.dev/showcases.html)
+.slidev-layout{
+  background-color: #499DA2;
+  height: 100vh;
+}
+</style>
 
-<PoweredBySlidev mt-10 />
+# Service Launching (1st Gen)
+
+- Shopify (= Landing Page & EC) is easy to set up
+- To use App Runner (= user profile pages), <span v-mark.orange=1>only we need is just to push the image!</span>
+
+<div class="flex w-full justify-center gap-4">
+  <!-- <img src="/assets/diagram.png" class="h-110 w-160 object-cover"> -->
+  <img src="/assets/infra/1st.png" class="h-90 w-100 object-cover">
+  <img src="/assets/profile.png" class="h-90 object-cover">
+  <img src="/assets/bizcard.png" class="h-90 object-cover">
+</div>
+
+---
+transition: slide-left
+---
+
+<style>
+
+.slidev-layout{
+  background-color: #499DA2;
+  height: 100vh;
+}
+</style>
+
+# Card designing with Next.js (2nd Gen)
+
+<ul>
+<li>React could handle more complex UI (states, draggable and editable elements)</li>
+<li>To use Amplify, <span v-mark.orange=1>only we need is just to push the code!</span>
+  <span v-click=2>
+    <ul>
+      <li>
+        <a href="https://docs.aws.amazon.com/amplify/latest/userguide/pr-previews.html">Web previews for pull requests</a> is AWSome!
+      </li>
+    </ul>
+  </span>
+</li>
+</ul>
+
+<div class="flex w-full justify-center gap-4">
+  <!-- <img src="/assets/diagram.png" class="h-110 w-160 object-cover"> -->
+  <img src="/assets/infra/2nd.png" class="h-80 w-70 object-cover">
+  <video muted class="h-80" loop autoplay>
+    <source src="/assets/maker.mov" type="video/mp4">
+  </video>
+</div>
+
+---
+transition: slide-left
+---
+
+<style>
+
+.slidev-layout{
+  background-color: #499DA2;
+  height: 100vh;
+}
+</style>
+
+# SSH by ECS & Session Manager (3rd Gen)
+
+- AppRunner does not support SSH 😢
+- I add Terraform based script to create temporary ECS on demand
+- SSH and port forwarding to RDS with Session Manager
+- IAM based authentication and keeping RDS & ECS on private network is AWSome!
+
+<div class="flex w-full justify-center">
+  <!-- <img src="/assets/diagram.png" class="h-110 w-160 object-cover"> -->
+  <img src="/assets/infra/3rd.png" class="h-75 w-75 object-cover">
+</div>
+
+---
+transition: slide-left
+---
+
+<style>
+
+.slidev-layout{
+  background-color: #499DA2;
+  height: 100vh;
+}
+</style>
+
+# Protection by WAF
+
+- Just select AppRunner as Web ACL's origin. That's it!
+
+<div class="flex w-full justify-center">
+  <!-- <img src="/assets/diagram.png" class="h-110 w-160 object-cover"> -->
+  <img src="/assets/infra/waf.png" class="h-100 w-120 object-cover">
+</div>
+
+---
+transition: slide-left
+---
+
+<style>
+
+.slidev-layout{
+  background-color: #499DA2;
+  height: 100vh;
+}
+</style>
+
+# Logging by CloudWatch
+
+- CloudWatch is enabled by default with AppRunner
+- We just modified Rails log format by adding a gem (lograge)
+
+<div class="flex w-full justify-center">
+  <!-- <img src="/assets/diagram.png" class="h-110 w-160 object-cover"> -->
+  <img src="/assets/infra/cloudwatch.png" class="h-90 w-100 object-cover">
+</div>
+
+---
+transition: slide-left
+---
+
+<style>
+
+.slidev-layout{
+  background-color: #499DA2;
+  height: 100vh;
+}
+</style>
+
+# Connecting to BigQuery
+
+- We execute S3 snapshot exportation every day by GitHub Actions
+
+<div class="flex w-full justify-center">
+  <!-- <img src="/assets/diagram.png" class="h-110 w-160 object-cover"> -->
+  <img src="/assets/infra/snapshot.png" class="h-100 w-140 object-cover">
+</div>
+
+---
+transition: slide-left
+---
+
+<style>
+
+.slidev-layout{
+  background-color: #499DA2;
+  height: 100vh;
+}
+</style>
+
+# Replacing SendGrid's Inbound Parse with SES
+
+- SES->Lambda was faster a few seconds than Inbound Parse
+
+<div class="flex w-full justify-center gap-4">
+  <!-- <img src="/assets/diagram.png" class="h-110 w-160 object-cover"> -->
+  <img src="/assets/infra/ses.png" class="h-100 w-120 object-cover">
+  <img src="/assets/mail_step1.png" class="h-100 object-cover">
+  <img src="/assets/mail_step2.png" class="h-100 object-cover">
+</div>
+
+---
+transition: slide-left
+---
+
+<style>
+
+.slidev-layout{
+  background-color: #499DA2;
+  height: 100vh;
+}
+</style>
+
+# Ending: Don't aim for perfection
+
+<p class="h-1"></p>
+
+We don't replace AWS services, but add a bit one by one when we need it.
+
+<li v-click=1>Preparing "the perfect architecture" can be slow start for startups</li>
+<li v-click=2>Replacing with better architecture is time-consuming and often risky</li>
+<li v-click=3>If there are pros and cons between some AWS services, using both is sometimes good strategy</li>
+
+<div class="flex w-full justify-center" v-click=4>
+  <img src="/assets/agile.png" class="h-70 object-cover">
+</div>
+<div class="flex w-full justify-center" v-click=4>
+  <span class="text-xs">https://blog.crisp.se/2016/01/25/henrikkniberg/making-sense-of-mvp</span>
+</div>
+
+<div v-click=5 class="fixed bottom-10 right-10 text-3xl">Thank you!</div>
