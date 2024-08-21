@@ -79,8 +79,10 @@ Studio Prairie Inc. <span v-click="4" v-mark.orange="4">a.k.a. Prairie Card's co
 ### Love
 <span v-mark.circle.orange="6">AWS</span><span v-click=[0,6]>, Terraform, Ruby on Rails, Next.js, TypeScript</span>
 ### Web
-<span v-mark.circle.orange="7">https://my.prairie.cards/u/umihico</span> (X, GitHub, etc.)
+<span>https://my.prairie.cards/u/umihico</span>
 
+<p v-click="7" class="absolute transform rotate-7" style="left: 400px;top: 460px;">Prairie Card</p>
+<arrow v-click="7" x1="500" y1="510" x2="350" y2="490" color="#FFF" width="2" arrowSize="1" />
 
 <p v-click="2" class="absolute transform rotate-8" style="left: 610px;top: 210px;">Me</p>
 <arrow v-click="2" x1="600" y1="250" x2="750" y2="270" color="#FFF" width="2" arrowSize="1" />
@@ -117,42 +119,18 @@ layout: intro
 transition: slide-left
 ---
 
-<div v-click=1>
-<h1>What is Prairie Card?</h1>
+<div class="flex justify-center align-items-center">
+<h1 class="pt-3">Swag for speakers 🎉 　</h1>
+<img v-mark.orange=1 src="/assets/logo.png" class="w-50 pb-2">
 </div>
 
-<ul>
-<li v-click=2><span v-mark.orange>Digital Business Card</span> with NFC Technology</li>
-<li v-click=3><span v-mark.orange>No App</span> Required</li>
-<li v-click=4><span v-mark.orange>No Camera</span> Required</li>
-<li v-click=5><span v-mark.orange>Designable</span> as you want
-<ul>
-  <li v-click=6>Cool examples <a href="https://x.com/hashtag/PrairieFriends">https://x.com/hashtag/<span v-mark.orange>PrairieFriends</span></a></li>
-</ul>
-</li>
-</ul>
+<div class="grid grid-cols-2 text-center justify-items-center mt-10">
+<img src="/assets/swag.png" class="h-80">
+<img src="/assets/swag_tweet.png" class="h-80">
+<span class="text-xs">https://jawspankration2024.jaws-ug.jp/en/news/jehfb2uqlw/</span>
+<span class="text-xs">https://x.com/jawsdays/status/1818978512575062221</span>
+</div>
 
-<div class="h-28"></div>
-<img v-click=1 src="/assets/qr.png" class="w-20 fixed bottom-8 left-115">
-
-### Web
-
-<span v-mark.circle.orange=0>https://my.prairie.cards/u/umihico</span> (X, GitHub, etc.)
-
-
-<img v-click=2 src="/assets/launch_image.webp" class="fixed bottom-40 right-10 w-98">
-<img v-click=3 src="/assets/demo.gif" class="fixed bottom-40 right-10 w-100">
-<!-- <img src="/assets/prairie_card_description.webp" class="fixed top-10 right-10 w-80"> -->
-
-<video v-click=5 muted class="fixed bottom-40 right-10 w-102" controls loop>
-  <source src="/assets/demo.mov" type="video/mp4">
-</video>
-
-<!-- 
-  background-image: url("/assets/demo.gif");
-  background-repeat: no-repeat;
-  background-position: right 5% bottom 50%;
-  background-size: 40%; -->
 <style>
 h1 {
   font-size: 2em !important;
@@ -169,23 +147,25 @@ transition: slide-left
 
 <style>
 
+h1 {
+  font-size: 2em !important;
+}
 .slidev-layout{
   background-color: #499DA2;
   height: 100vh;
 }
 </style>
 
-# As one of awesome swags 🎉
+# Digital Business Card: Prairie Card
 
-<div class="flex">
-<div>
-<a href="https://jawspankration2024.jaws-ug.jp/en/news/jehfb2uqlw/">https://jawspankration2024.jaws-ug.jp/en/news/jehfb2uqlw/</a>
-<img src="/assets/swag.png" class="h-90 mt-2">
+<div class="flex w-full justify-center">
+  <img src="/assets/demo.gif" class="h-70 object-cover mt-15">
+  <img src="/assets/iphone-profile.png" class="h-100 object-cover mx-6">
+  <img src="/assets/iphone-bizcard.png" class="h-100 object-cover">
 </div>
-<div>
-<a href="https://x.com/jawsdays/status/1818978512575062221">https://x.com/jawsdays/status/1818978512575062221</a>
-<img src="/assets/swag_tweet.png" class="h-90 mt-8">
-</div>
+<div class="fixed bottom-10 left-10">
+<li class="text-xl" v-click=1><span v-mark.orange>No App & No Camera</span></li>
+<li class="text-xl" v-click=2><span v-mark.orange>Card design is up to you</span></li>
 </div>
 
 ---
@@ -200,7 +180,7 @@ transition: slide-left
 }
 </style>
 
-# Which service does host your website?
+# Quiz: Prairie Card's AWS Architecture
 
 <p class="h-5"></p>
 
@@ -221,6 +201,8 @@ transition: slide-left
 
 <p class="h-5"></p>
 
+<div class="text-xl">
+  
 <div v-click=1>🤔 We are just one year+ old startup</div>
 <div v-click=2>🤔 Our human resources is limited</div>
 <div v-click=3>🤔 Our traffic is not so high</div>
@@ -228,6 +210,7 @@ transition: slide-left
 <p class="h-1"></p>
 
 <div v-click=4>Therefore...?</div>
+</div>
 <h2 v-click=5>We are using them ALL and we are happy with it! 🤤</h2>
 
 ---
@@ -244,14 +227,12 @@ transition: slide-left
 
 # Service Launching (1st Gen)
 
-- Shopify (= Landing Page & EC) is easy to set up
-- To use App Runner (= user profile pages), <span v-mark.orange=1>only we need is just to push the image!</span>
+- Shopify (= Landing Page & EC) was easy to start.
+- To use App Runner, <span v-mark.orange=1>only we need is just to push the image!</span>
 
 <div class="flex w-full justify-center gap-4">
   <!-- <img src="/assets/diagram.png" class="h-110 w-160 object-cover"> -->
   <img src="/assets/infra/1st.png" class="h-90 w-100 object-cover">
-  <img src="/assets/profile.png" class="h-90 object-cover">
-  <img src="/assets/bizcard.png" class="h-90 object-cover">
 </div>
 
 ---
@@ -304,8 +285,8 @@ transition: slide-left
 # SSH by ECS & Session Manager (3rd Gen)
 
 - AppRunner does not support SSH 😢
-- I add Terraform based script to create temporary ECS on demand
-- SSH and port forwarding to RDS with Session Manager
+- I added Terraform based script, to create temporary ECS on demand
+- Port forwarding to RDS is also possible
 - IAM based authentication and keeping RDS & ECS on private network is AWSome!
 
 <div class="flex w-full justify-center">
@@ -416,11 +397,15 @@ transition: slide-left
 
 <p class="h-1"></p>
 
+<div class="text-xl">
+
 We don't replace AWS services, but add a bit one by one when we need it.
 
-<li v-click=1>Preparing "the perfect architecture" can be slow start for startups</li>
+<li v-click=1>"The Perfect Architecture" can be slow start for startups</li>
 <li v-click=2>Replacing with better architecture is time-consuming and often risky</li>
-<li v-click=3>If there are pros and cons between some AWS services, using both is sometimes good strategy</li>
+<li v-click=3>If there are pros and cons between some AWS services, how about using both?</li>
+
+</div>
 
 <div class="flex w-full justify-center" v-click=4>
   <img src="/assets/agile.png" class="h-70 object-cover">
